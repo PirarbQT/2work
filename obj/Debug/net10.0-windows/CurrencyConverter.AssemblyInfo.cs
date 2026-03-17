@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("CurrencyConverter")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Exchange money V.1.0 by 68347701 A.atchara")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("CurrencyConverter")]
-[assembly: System.Reflection.AssemblyTitleAttribute("CurrencyConverter")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+405040c1b1f9543eabb10121f7f221bbdde8b069")]
+[assembly: System.Reflection.AssemblyProductAttribute("Exchange money V.1.0 by 68347701 A.atchara")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Exchange money V.1.0 by 68347701 A.atchara")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

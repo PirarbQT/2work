@@ -25,7 +25,9 @@ internal sealed class CurrencyConverterForm : Form
 
     public CurrencyConverterForm()
     {
+        Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
         Text = "โปรแกรมแปลงสกุลเงิน";
+        Text = "Exchange money V.1.0 by 68347701 A.atchara";
         StartPosition = FormStartPosition.CenterScreen;
         FormBorderStyle = FormBorderStyle.FixedSingle;
         MaximizeBox = false;

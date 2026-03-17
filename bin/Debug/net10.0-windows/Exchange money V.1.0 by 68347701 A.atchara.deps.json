@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "CurrencyConverter/1.0.0": {
+      "Exchange money V.1.0 by 68347701 A.atchara/1.0.0": {
         "runtime": {
-          "CurrencyConverter.dll": {}
+          "Exchange money V.1.0 by 68347701 A.atchara.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "CurrencyConverter/1.0.0": {
+    "Exchange money V.1.0 by 68347701 A.atchara/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

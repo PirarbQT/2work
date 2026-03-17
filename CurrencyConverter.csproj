@@ -5,5 +5,9 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>Exchange money V.1.0 by 68347701 A.atchara</AssemblyName>
+    <Title>Exchange money V.1.0 by 68347701 A.atchara</Title>
+    <Product>Exchange money V.1.0 by 68347701 A.atchara</Product>
+    <ApplicationIcon>Assets\money.ico</ApplicationIcon>
   </PropertyGroup>
 </Project>

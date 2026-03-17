@@ -1,14 +1,15 @@
-C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\CurrencyConverter.exe
-C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\CurrencyConverter.deps.json
-C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\CurrencyConverter.runtimeconfig.json
-C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\CurrencyConverter.dll
-C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\CurrencyConverter.pdb
 C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.AssemblyInfoInputs.cache
 C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.AssemblyInfo.cs
 C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.csproj.CoreCompileInputs.cache
-C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.dll
-C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\refint\CurrencyConverter.dll
-C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.pdb
 C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.genruntimeconfig.cache
-C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\ref\CurrencyConverter.dll
+C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\CurrencyConverter.sourcelink.json
+C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\Exchange money V.1.0 by 68347701 A.atchara.exe
+C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\Exchange money V.1.0 by 68347701 A.atchara.deps.json
+C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\Exchange money V.1.0 by 68347701 A.atchara.runtimeconfig.json
+C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\Exchange money V.1.0 by 68347701 A.atchara.dll
+C:\Users\johnn\Downloads\2work-main\bin\Debug\net10.0-windows\Exchange money V.1.0 by 68347701 A.atchara.pdb
+C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\Exchange money V.1.0 by 68347701 A.atchara.dll
+C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\refint\Exchange money V.1.0 by 68347701 A.atchara.dll
+C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\Exchange money V.1.0 by 68347701 A.atchara.pdb
+C:\Users\johnn\Downloads\2work-main\obj\Debug\net10.0-windows\ref\Exchange money V.1.0 by 68347701 A.atchara.dll
