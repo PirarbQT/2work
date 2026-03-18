@@ -26,7 +26,6 @@ internal sealed class CurrencyConverterForm : Form
     public CurrencyConverterForm()
     {
         Icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
-        Text = "โปรแกรมแปลงสกุลเงิน";
         Text = "Exchange money V.1.0 by 68347701 A.atchara";
         StartPosition = FormStartPosition.CenterScreen;
         FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -36,7 +35,7 @@ internal sealed class CurrencyConverterForm : Form
 
         var amountLabel = new Label
         {
-            Text = "จำนวนเงิน",
+            Text = "Amount",
             AutoSize = true,
             Location = new Point(30, 33)
         };
@@ -49,7 +48,7 @@ internal sealed class CurrencyConverterForm : Form
 
         var fromLabel = new Label
         {
-            Text = "จากสกุลเงิน",
+            Text = "From currency",
             AutoSize = true,
             Location = new Point(30, 83)
         };
@@ -63,7 +62,7 @@ internal sealed class CurrencyConverterForm : Form
 
         var toLabel = new Label
         {
-            Text = "เป็นสกุลเงิน",
+            Text = "To currency",
             AutoSize = true,
             Location = new Point(30, 133)
         };
@@ -86,7 +85,7 @@ internal sealed class CurrencyConverterForm : Form
 
         var convertButton = new Button
         {
-            Text = "แปลงค่า",
+            Text = "Convert",
             Location = new Point(180, 340),
             Size = new Size(110, 34)
         };
@@ -94,7 +93,7 @@ internal sealed class CurrencyConverterForm : Form
 
         var resetButton = new Button
         {
-            Text = "ล้างค่า",
+            Text = "Reset",
             Location = new Point(320, 340),
             Size = new Size(110, 34)
         };
@@ -126,8 +125,8 @@ internal sealed class CurrencyConverterForm : Form
         fromCurrencyComboBox.SelectedIndex = 0;
         toCurrencyComboBox.SelectedIndex = 1;
         resultTextBox.Text =
-            "กรอกจำนวนเงิน เลือกสกุลเงินต้นทางและปลายทาง" + Environment.NewLine +
-            "แล้วกดปุ่ม แปลงค่า";
+            "Enter an amount, choose the source and target currencies," + Environment.NewLine +
+            "then click Convert.";
     }
 
     private void ConvertCurrency()
@@ -139,7 +138,12 @@ internal sealed class CurrencyConverterForm : Form
 
         if (fromCurrencyComboBox.SelectedIndex < 0 || toCurrencyComboBox.SelectedIndex < 0)
         {
-            MessageBox.Show(this, "กรุณาเลือกสกุลเงินต้นทางและปลายทาง", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(
+                this,
+                "Please choose both the source and target currencies.",
+                "Invalid Input",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
             return;
         }
 
@@ -151,14 +155,14 @@ internal sealed class CurrencyConverterForm : Form
         var directRate = fromCurrency.RateToThb / toCurrency.RateToThb;
 
         var builder = new StringBuilder();
-        builder.AppendLine($"จำนวนเงิน: {amount:F2} {fromCurrency.Code}");
-        builder.AppendLine($"แปลงแล้ว: {convertedAmount:F2} {toCurrency.Code}");
+        builder.AppendLine($"Amount: {amount:F2} {fromCurrency.Code}");
+        builder.AppendLine($"Converted: {convertedAmount:F2} {toCurrency.Code}");
         builder.AppendLine();
-        builder.AppendLine($"อัตราแลกเปลี่ยน: 1 {fromCurrency.Code} = {directRate:F4} {toCurrency.Code}");
-        builder.AppendLine($"อ้างอิง: 1 {fromCurrency.Code} = {fromCurrency.RateToThb:F2} THB");
-        builder.AppendLine($"อ้างอิง: 1 {toCurrency.Code} = {toCurrency.RateToThb:F2} THB");
+        builder.AppendLine($"Exchange rate: 1 {fromCurrency.Code} = {directRate:F4} {toCurrency.Code}");
+        builder.AppendLine($"Reference: 1 {fromCurrency.Code} = {fromCurrency.RateToThb:F2} THB");
+        builder.AppendLine($"Reference: 1 {toCurrency.Code} = {toCurrency.RateToThb:F2} THB");
         builder.AppendLine();
-        builder.Append("หมายเหตุ: อัตราแลกเปลี่ยนถูกกำหนดคงที่ในซอร์สโค้ดสำหรับการสาธิต");
+        builder.Append("Note: The exchange rates are fixed in the source code for demonstration purposes.");
 
         resultTextBox.Text = builder.ToString();
     }
@@ -167,7 +171,12 @@ internal sealed class CurrencyConverterForm : Form
     {
         if (string.IsNullOrWhiteSpace(amountTextBox.Text))
         {
-            MessageBox.Show(this, "กรุณากรอกจำนวนเงิน", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(
+                this,
+                "Please enter an amount.",
+                "Invalid Input",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
             amount = 0m;
             return false;
         }
@@ -175,13 +184,23 @@ internal sealed class CurrencyConverterForm : Form
         if (!decimal.TryParse(amountTextBox.Text, NumberStyles.Number, CultureInfo.InvariantCulture, out amount) &&
             !decimal.TryParse(amountTextBox.Text, NumberStyles.Number, CultureInfo.CurrentCulture, out amount))
         {
-            MessageBox.Show(this, "จำนวนเงินต้องเป็นตัวเลข", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(
+                this,
+                "The amount must be a valid number.",
+                "Invalid Input",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
             return false;
         }
 
         if (amount < 0m)
         {
-            MessageBox.Show(this, "จำนวนเงินต้องมากกว่าหรือเท่ากับศูนย์", "ข้อมูลไม่ถูกต้อง", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show(
+                this,
+                "The amount must be greater than or equal to zero.",
+                "Invalid Input",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
             return false;
         }
 
